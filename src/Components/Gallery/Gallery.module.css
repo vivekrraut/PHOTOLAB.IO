@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+  margin: 10px;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.downloadButton {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1;
+  padding: 8px 16px;
+  color: #fff;
+  font-size: 10px;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.downloadButton:hover {
+  background-color: #e6b636;
+}
+
+.site-info {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 18px;
+    margin: 10px auto;
+    max-width: 600px;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  
+  .site-info {
+    font-size: 16px;
+  }
+}
